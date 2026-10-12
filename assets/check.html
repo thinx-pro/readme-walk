@@ -1,0 +1,36 @@
+<!doctype html><meta charset="utf-8"><style>
+body{margin:0;background:#0d1117}
+.win{margin:24px;border-radius:10px;background:#161b22;box-shadow:0 8px 30px rgba(0,0,0,.5);overflow:hidden;width:max-content}
+.bar{height:30px;background:#21262d;display:flex;align-items:center;gap:8px;padding:0 12px}
+.dot{width:12px;height:12px;border-radius:50%}
+pre{margin:0;padding:18px 22px 22px;color:#c9d1d9;font:14px/1.5 "SF Mono",Menlo,Consolas,monospace}
+</style><div class="win"><div class="bar"><span class="dot" style="background:#ff5f56"></span>
+<span class="dot" style="background:#ffbd2e"></span><span class="dot" style="background:#27c93f"></span></div>
+<pre><span style="color:#8b949e">$ python3 readme_check.py examples/bad-README.md</span>
+<span style="font-weight:700">readme_check bad-README.md</span>  ·  12 steps  ·  tools: cp, docker, git, make, npm, tinynotes
+
+<span style="font-weight:700">Steps a newcomer will run, in order</span>
+   1. git clone https://github.com/example/tinynotes<span style="color:#8b949e">   (L7 · Install)</span>
+   2. cd tinynotes<span style="color:#8b949e">   (L7 · Install)</span>
+   3. npm install<span style="color:#8b949e">   (L7 · Install)</span>
+   4. cp env.example .env<span style="color:#8b949e">   (L7 · Install)</span>
+   5. export TINYNOTES_TOKEN=&lt;your-api-token&gt;<span style="color:#8b949e">   (L16 · Install)</span>
+   6. tinynotes add “first note” --dir /Users/alice/notes<span style="color:#8b949e">   (L22 · Usage)</span>
+   7. make dev<span style="color:#8b949e">   (L30 · Development)</span>
+   8. ./scripts/seed.sh<span style="color:#8b949e">   (L30 · Development)</span>
+   9. docker compose up -d<span style="color:#8b949e">   (L30 · Development)</span>
+  10. npm run migrate<span style="color:#8b949e">   (L30 · Development)</span>
+  11. npm run test<span style="color:#8b949e">   (L30 · Development)</span>
+  12. npm run lint<span style="color:#8b949e">   (L30 · Development)</span>
+
+<span style="font-weight:700">Findings</span>
+  <span style="color:#ff7b72;font-weight:700">error</span> L1    no-intro           no sentence explaining what this is before the first code block
+  <span style="color:#56d4dd">info </span> L7    long-quickstart    quick start has 6 commands; consider a shorter happy path
+  <span style="color:#e3b341">warn </span> L7    prompt-in-command  command lines start with a prompt ($, &gt;, %); copy-paste will fail. Drop the prompt or tag the block `console`
+  <span style="color:#e3b341">warn </span> L17   placeholder        placeholder &#x27;&lt;your-api-token&gt;&#x27;: say where the value comes from, or give a working default
+  <span style="color:#e3b341">warn </span> L23   machine-path       machine-specific path: /Users/alice
+  <span style="color:#ff7b72;font-weight:700">error</span> L23   smart-quotes       typographic quote/dash or non-breaking space in a command: &#x27;tinynotes add “first note” --dir /Users/alice/notes&#x27;
+  <span style="color:#ff7b72;font-weight:700">error</span> L26   broken-anchor      link to #faq but no such heading
+  <span style="color:#ff7b72;font-weight:700">error</span> L26   broken-link        relative link to docs/config.md but the file does not exist
+
+4 errors · 3 warnings · 1 notes</pre></div>
