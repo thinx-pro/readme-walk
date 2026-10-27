@@ -4,6 +4,9 @@
 A drop-in Skill for Claude Code (works with any agent that reads `SKILL.md`), plus a zero-dependency
 static checker for the mistakes that break copy-paste.
 
+<!-- agent-preflight -->
+> **Also a Claude Code skill.** `readme-walk` is part of [agent-preflight](https://github.com/thinx-pro/agent-preflight), 16 offline checks for coding agents: `/plugin marketplace add thinx-pro/agent-preflight` then `/plugin install readme-walk@agent-preflight`, and ask Claude in plain words.
+
 ![skill](https://img.shields.io/badge/Claude%20Code-skill-8A63D2) ![deps](https://img.shields.io/badge/dependencies-0-brightgreen) ![python](https://img.shields.io/badge/python-3.9%2B-blue) ![license](https://img.shields.io/badge/license-MIT-green) ![version](https://img.shields.io/badge/version-0.1.0-lightgrey)
 
 ![readme_check output on a deliberately bad README](assets/check.png)
