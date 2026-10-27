@@ -97,9 +97,3 @@ python3 scripts/render_demo.py      # regenerates assets/check.html for the scre
 ## License
 
 MIT
-
----
-
-### 中文说明
-
-**readme-walk**：让编码 Agent 像第一次来的新人一样，只看 README、在干净副本里逐条照做，最后交一份「摩擦日志」（每步 ok / 靠猜 / 卡住，加上具体的 README 修改建议）。附带零依赖的静态检查脚本，能查出命令里的提示符、占位符、中文引号/弯引号、坏链接和锚点、本机没装的工具、写死的个人路径、缺少「这是什么」的开头等问题。安装方式：把 `skills/readme-walk` 复制到 `~/.claude/skills/`，然后在项目里对 Claude Code 说「walk the README」。
